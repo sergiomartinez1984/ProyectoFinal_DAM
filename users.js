@@ -29,8 +29,9 @@
                         <table class="table table-striped table-bordered table-hover table-dark">
                             <tbody>
                                 <tr>
-                                    <th style="width: 80%">${childSnapshot.val().username}</th>
-                                    <th style="width: 20%">${childSnapshot.val().gemas}</th> 
+                                    <th style="width: 60%">${childSnapshot.val().username}</th>
+                                    <th style="width: 20%">${childSnapshot.val().gemas}</th>
+                                    <th style="width: 20%">${childSnapshot.val().puntos}</th>  
                                 </tr>
                             </tbody>
                         </table>
