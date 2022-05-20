@@ -1,6 +1,6 @@
 
     // crea la variable que hace referencia al contenedor de listaUsuarios.html
-    const container = document.getElementById('container');
+    const tableRows = document.getElementById('tableContent');
    
     const firebaseConfig = {
         apiKey: "AIzaSyD8uqrpXxrbMDh-BG2JdfoDDgmcDb7s4JI",
@@ -23,20 +23,14 @@
     window.addEventListener('DOMContentLoaded', async (e) => {
         userDataRef.once("value").then(function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
-                container.innerHTML += 
-                `<div class="row">
-                    <div class="col" style="margin-bottom: -16px">
-                        <table class="table table-striped table-bordered table-hover table-dark">
-                            <tbody>
-                                <tr>
-                                    <th style="width: 60%">${childSnapshot.val().username}</th>
-                                    <th style="width: 20%">${childSnapshot.val().gemas}</th>
-                                    <th style="width: 20%">${childSnapshot.val().puntos}</th>  
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>    
-                </div>`
+                tableRows.innerHTML += 
+                `
+                    <tr>
+                        <td style="width: 60%">${childSnapshot.val().username}</td>
+                        <td style="width: 20%">${childSnapshot.val().gemas}</td>
+                        <td style="width: 20%">${childSnapshot.val().puntos}</td>  
+                    </tr>
+                `
             });
         });
     })

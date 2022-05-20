@@ -308,6 +308,27 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
+  cursor: pointer;
+}
+
+table tr th {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sorting {
+  background-color: #D4D4D4;
+}
+
+.asc:after {
+  content: ' ↑';
+}
+
+.desc:after {
+  content: " ↓";
 }
 
 caption {
@@ -316,6 +337,7 @@ caption {
   color: #6c757d;
   text-align: left;
 }
+
 
 th {
   text-align: inherit;
