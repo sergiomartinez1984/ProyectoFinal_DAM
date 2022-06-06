@@ -26,9 +26,10 @@
                 tableRows.innerHTML += 
                 `
                     <tr>
-                        <td style="width: 60%">${childSnapshot.val().username}</td>
-                        <td style="width: 20%">${childSnapshot.val().gemas}</td>
-                        <td style="width: 20%">${childSnapshot.val().puntos}</td>  
+                        <td style="width: 55%">${childSnapshot.val().username}</td>
+                        <td style="width: 15%">${childSnapshot.val().gemas}</td>
+                        <td style="width: 15%">${childSnapshot.val().enemigos}</td>
+                        <td style="width: 15%">${childSnapshot.val().puntos}</td>  
                     </tr>
                 `
             });
